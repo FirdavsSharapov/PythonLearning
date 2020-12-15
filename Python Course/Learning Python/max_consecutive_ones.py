@@ -45,6 +45,21 @@ def merge(nums1, m, nums2, n) -> None:
     nums1.sort()
 
 
+def removeElement(nums, val) -> int:
+    i = 0
+    for x in range(len(nums)):
+        if nums[x] != val:
+            del nums[x-1]
+    return i
+
+
+nums = [0, 1, 2, 2, 3, 0, 4, 2]
+val = 2
+
+
+print(removeElement(nums, val))
+
+
 nums1 = [1, 2, 3, 0, 0, 0]
 m = 3
 nums2 = [2, 5, 6]
