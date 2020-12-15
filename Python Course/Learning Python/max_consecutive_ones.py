@@ -52,21 +52,30 @@ def removeElement(nums, val) -> int:
             del nums[x-1]
     return i
 
+def removeDuplicate(nums) -> int:
+    nums.sort()
+    for x in range(len(nums)):
+       if nums[x] == nums[0+1]:
+           del nums[x]
+    return 0
 
-nums = [0, 1, 2, 2, 3, 0, 4, 2]
-val = 2
+# nums = [0, 1, 2, 2, 3, 0, 4, 2]
+# val = 2
 
 
-print(removeElement(nums, val))
+# print(removeElement(nums, val))
 
 
-nums1 = [1, 2, 3, 0, 0, 0]
-m = 3
-nums2 = [2, 5, 6]
-n = 3
+# nums1 = [1, 2, 3, 0, 0, 0]
+# m = 3
+# nums2 = [2, 5, 6]
+# n = 3
 
-print(merge(nums1, m, nums2, n))
+# print(merge(nums1, m, nums2, n))
 
-test = [1, 0, 2, 3, 0, 4, 5, 0]
+# test = [1, 0, 2, 3, 0, 4, 5, 0]
 
-print(duplicateZero(test))
+# print(duplicateZero(test))
+
+nums = [0,1,1,1,2,2,3,3,4,0]
+print (removeDuplicate(nums))
