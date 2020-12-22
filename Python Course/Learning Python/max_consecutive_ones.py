@@ -53,11 +53,16 @@ def removeElement(nums, val) -> int:
     return i
 
 def removeDuplicate(nums) -> int:
-    nums.sort()
-    for x in range(len(nums)):
-       if nums[x] == nums[0+1]:
-           del nums[x]
-    return 0
+    # nums.sort() # will take extra space complexity and time complexity
+       for x in nums:
+        for y in nums:
+            if x == y:
+                del nums[y+1]
+
+nums = [0,1,5,1,2,5,3,3,4,3]
+print (removeDuplicate(nums))
+
+
 
 # nums = [0, 1, 2, 2, 3, 0, 4, 2]
 # val = 2
@@ -77,5 +82,3 @@ def removeDuplicate(nums) -> int:
 
 # print(duplicateZero(test))
 
-nums = [0,1,1,1,2,2,3,3,4,0]
-print (removeDuplicate(nums))
