@@ -52,18 +52,34 @@ def removeElement(nums, val) -> int:
             del nums[x-1]
     return i
 
-def removeDuplicate(nums) -> int:
-    # nums.sort() # will take extra space complexity and time complexity
-       for x in nums:
-        for y in nums:
-            if x == y:
-                del nums[y+1]
+# def removeDuplicate(nums) -> int:
+#     # nums.sort() # will take extra space complexity and time complexity
+#     # i = 0
+#     for j in range(len(nums)):
+#         for i in range(len(nums)-1):
+#             if nums[j] != nums[i+1]:
+#                 i += 1
+#             else:
+#                 del nums[j]
 
-nums = [0,1,5,1,2,5,3,3,4,3]
-print (removeDuplicate(nums))
+# nums = [0,1,5,1,2,5,3,3,4,3]
+# print (removeDuplicate(nums))
 
 
+def findLengthOfLCIS(nums) -> int:
+    result = 1
+    i = 1
+    while i < len(nums):
+        if nums[i-1] < nums[i]:
+            result += 1
+        elif nums[i-1] == nums[i]:
+            break
+        i += 1
+    return result
 
+# nums = [1,3,5,7]
+# nums =[2,2,2,2,2]
+# print (findLengthOfLCIS(nums))
 # nums = [0, 1, 2, 2, 3, 0, 4, 2]
 # val = 2
 
@@ -82,3 +98,50 @@ print (removeDuplicate(nums))
 
 # print(duplicateZero(test))
 
+def removeDuplicatesOnce(nums):
+    _i = 1
+    for nums
+
+    while _i < len(nums):
+        if nums[_i] == nums[_i - 1]:
+            nums.pop(_i)
+            _i -= 1
+            if len(nums) == 1 and :
+                break
+        else:
+            _i += 1
+    return nums
+
+    # if len(nums) == 0:
+    #     return 0
+    # for i in range(1, len(nums)):
+    #     if nums[i] != nums[i-1]:
+    #         nums[_ctr] = nums[i]
+    #         _ctr +=1
+    # nums = nums[:_ctr]
+    # return nums
+
+
+sr = [0, 0, 0, 0, 0]
+# [1,1]
+print(removeDuplicatesOnce(sr))
+
+
+def isPathCrossing(path) -> bool:
+    d = {}
+    x =0 
+    y = 0
+    d[(0, 0)] = 0
+    for i in path:
+        if i == 'N':
+            y += 1
+        elif i == 'S':
+            y -= 1
+        elif i == 'E':
+            x += 1
+        else:
+            x -= 1
+        if (x, y) in d:
+            return True
+        d[(x, y)] = 0
+    return False
