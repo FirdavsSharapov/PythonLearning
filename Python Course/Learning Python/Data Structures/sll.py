@@ -22,3 +22,22 @@ class SLLNode:
     def set_next(self, new_next):
         """replace the existing value of the self.next attribute with new_data"""
         self.next = new_next
+
+
+class SLL:
+    def __init__(self):
+        self.head = None
+
+    def __repr__(self):
+        return "SLL object: head={}".format(self.head)
+    
+    def is_empty(self):
+        pass
+
+    def add_front(self, nex_data):
+        pass
+
+    def size(self):
+        pass
+
+    
