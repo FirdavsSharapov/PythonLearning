@@ -14,3 +14,12 @@ def removeMostDuplicates(nums):
 
 nums = [0,0,1,1,1,1,2,3,3,3,3,3,3]
 print (removeMostDuplicates(nums))
+
+
+
+def sun_angle(time):
+   hours = int(time[:2]) + int(time[3:]) / 60
+   if (hours < 6) or (hours > 18):
+       return "I don't see the sun!"
+   else:
+       return (hours - 6)/12 * 180
