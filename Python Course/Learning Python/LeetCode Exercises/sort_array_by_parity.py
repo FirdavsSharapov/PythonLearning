@@ -6,7 +6,6 @@ def sort_array_by_parity(nums):
     
     # The optimal solution in here to use two way pointer 
     # first pointer would be i
-    i = 0
     # second pointer would be j in loop
     for j in range(len(nums)):
         if nums[j] % 2 == 0:
