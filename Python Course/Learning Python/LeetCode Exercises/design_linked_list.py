@@ -55,3 +55,10 @@ class MyLinkedList:
             current.next = current.next.next              
 
         self.size -= 1
+
+
+if __name__ == '__main__':
+    newLinked = MyLinkedList()
+    newLinked.addAtHead
+
+    print(newLinked)
