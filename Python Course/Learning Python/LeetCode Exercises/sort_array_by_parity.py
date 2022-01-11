@@ -15,6 +15,6 @@ def sort_array_by_parity(nums):
     return nums
 
 
-example_test = [0,2]
+example_test = [3,0]
 print(sort_array_by_parity(example_test))
 
