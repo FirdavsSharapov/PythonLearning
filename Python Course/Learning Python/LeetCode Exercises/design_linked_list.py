@@ -1,12 +1,10 @@
 class ListNode:
-    
     def __init__(self, val):
         self.val = val
         self.next = None
 
 
 class MyLinkedList:
-
     def __init__(self):
         self.head = None
         self.size = 0
@@ -59,6 +57,6 @@ class MyLinkedList:
 
 if __name__ == '__main__':
     newLinked = MyLinkedList()
-    newLinked.addAtHead
+    newLinked.addAtHead(2)
 
-    print(newLinked)
+    print(newLinked.get(0))
